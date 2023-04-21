@@ -66,6 +66,8 @@ async fn streaming_response(
         "Meta data keys: {:?}",
         resp.metadata().keys().collect::<Vec<_>>()
     );
+    let server_trace_id = resp.metadata().get("x-server-trace-id");
+    println!("Server trace id = {:?}", server_trace_id);
     let mut resp = resp.into_inner();
     let wav = std::fs::File::create("hello_yandex.wav").expect("create audio file");
     let mut writer = std::io::BufWriter::new(wav);
