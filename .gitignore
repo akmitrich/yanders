@@ -1,2 +1,5 @@
 /target
 /Cargo.lock
+.secret
+.folder-id
+*.wav
