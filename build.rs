@@ -4,9 +4,9 @@ fn main() {
         .build_server(false)
         .compile(
             &[
-                "../cloudapi/third_party/googleapis/google/api/http.proto",
-                "../cloudapi/third_party/googleapis/google/api/annotations.proto",
-                "../cloudapi/third_party/googleapis/google/rpc/status.proto",
+                "google/api/http.proto",
+                "google/api/annotations.proto",
+                "google/rpc/status.proto",
             ],
             &["../cloudapi/third_party/googleapis/"],
         )
@@ -16,10 +16,12 @@ fn main() {
         .build_server(false)
         .compile(
             &[
-                "../cloudapi/yandex/cloud/api/operation.proto",
-                "../cloudapi/yandex/cloud/operation/operation.proto",
-                "../cloudapi/yandex/cloud/ai/tts/v3/tts_service.proto",
-                "../cloudapi/yandex/cloud/ai/tts/v3/tts.proto",
+                "yandex/cloud/api/operation.proto",
+                "yandex/cloud/operation/operation.proto",
+                "yandex/cloud/ai/tts/v3/tts_service.proto",
+                "yandex/cloud/ai/tts/v3/tts.proto",
+                "yandex/cloud/ai/stt/v3/stt_service.proto",
+                "yandex/cloud/ai/stt/v3/stt.proto",
             ],
             &["../cloudapi/", "../cloudapi/third_party/googleapis/"],
         )
